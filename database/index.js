@@ -20,7 +20,7 @@ async function petPopulate() {
       {
         breed: 'Labrador',
         species: 'Dog',
-        image: 'assets/sample_dog_labrador.jpg',
+        image: '/uploads/sample_dog_labrador.jpg',
         description: `I am a Labrador Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Kiwi',
         size: 'Medium',
@@ -30,7 +30,7 @@ async function petPopulate() {
       {
         breed: 'Shih Tzu',
         species: 'Dog',
-        image: 'assets/chia.jpg',
+        image: '/uploads/chia.jpg',
         description: `I am a Labrador Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Chia',
         size: 'Toy',
@@ -40,7 +40,7 @@ async function petPopulate() {
       {
         breed: 'Mini Poodle',
         species: 'Dog',
-        image: 'assets/sample_dog_toypoodle.jpg',
+        image: 'uploads/sample_dog_toypoodle.jpg',
         description: `I am a Mini Poodle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Korki',
         size: 'Medium',
@@ -50,7 +50,7 @@ async function petPopulate() {
       {
         breed: 'Ragdoll',
         species: 'Cat',
-        image: 'assets/sample_cat_ragdoll.jpg',
+        image: '/uploads/sample_cat_ragdoll.jpg',
         description: `I am a Ragdoll CatLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Alfalfa',
         size: 'Medium',
@@ -60,7 +60,7 @@ async function petPopulate() {
       {
         breed: 'Siamese',
         species: 'Cat',
-        image: 'assets/sample_cat_siamese.jpg',
+        image: '/uploads/sample_cat_siamese.jpg',
         description: `I am a Siamese CatLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Barret',
         size: 'Medium',
@@ -70,7 +70,7 @@ async function petPopulate() {
       {
         breed: 'Cockatoo',
         species: 'Bird',
-        image: 'assets/sample_bird_cockatoo.jpg',
+        image: '/uploads/sample_bird_cockatoo.jpg',
         description: `I am a CockatooLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Loki',
         size: 'Medium',
@@ -80,7 +80,7 @@ async function petPopulate() {
       {
         breed: 'Siamese',
         species: 'Cat',
-        image: 'assets/sample_cat_siamese2.jpg',
+        image: '/uploads/sample_cat_siamese2.jpg',
         description: `I am a Siamese CatLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Tim',
         size: 'Medium',
@@ -90,7 +90,7 @@ async function petPopulate() {
       {
         breed: 'Parrot',
         species: 'Bird',
-        image: 'assets/sample_bird_parrot.jpg',
+        image: '/uploads/sample_bird_parrot.jpg',
         description: `I am a Parrot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Rod',
         size: 'Medium',
@@ -100,7 +100,7 @@ async function petPopulate() {
       {
         breed: 'Dwarf',
         species: 'Hamster',
-        image: 'assets/sample_hamster_dwarf.jpg',
+        image: '/uploads/sample_hamster_dwarf.jpg',
         description: `I am a Dwarf Hamster Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Hammantha',
         size: 'Medium',
@@ -110,7 +110,7 @@ async function petPopulate() {
       {
         breed: 'Parrot',
         species: 'Bird',
-        image: 'assets/sample_bird_parrot.jpg',
+        image: '/uploads/sample_bird_parrot.jpg',
         description: `I am a Parrot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Porpie',
         size: 'Medium',
@@ -120,7 +120,7 @@ async function petPopulate() {
       {
         breed: 'Syrian',
         species: 'Hamster',
-        image: 'assets/sample_hamster_syrian.jpg',
+        image: '/uploads/sample_hamster_syrian.jpg',
         description: `I am a Syrian Hamster Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et turpis et enim fringilla auctor.`,
         name: 'Shark',
         size: 'Medium',

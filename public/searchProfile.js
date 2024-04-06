@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function generatePetProfile(pet) {
     return `
       <div class="pet-profile ${pet.breed.toLowerCase()}">
-        <img src="assets/${pet.image}" alt="${pet.name}"> <!-- Update image source URL here -->
+        <img src="${pet.image}" alt="${pet.name}"> <!-- Update image source URL here -->
         <h2>${pet.name}</h2>
         <p>${pet.breed}</p>
         <p class="overflow-scroll">${pet.description}</p>

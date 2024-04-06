@@ -73,7 +73,7 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start; 
   margin: 150px;
 }
 /* Pet profile */
@@ -87,8 +87,10 @@ body {
 }
 
 .pet-profile img {
-  width: 100%; 
+  width: 500px;
+  height: 500px;
 }
+
 
 .pet-profile h2 {
   font-family: "Hanuman", serif;
@@ -112,6 +114,22 @@ body {
   overflow-y: auto; 
 }
 
+.upload-button-container {
+  margin-top: 20px;
+}
+
+.upload-button-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.upload-button-label:hover {
+  background-color: #45a049;
+}
 
 /* Message button */
 #message-button {

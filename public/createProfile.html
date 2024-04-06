@@ -22,6 +22,7 @@
             <div class="column">
               <label for="speciesDropdown">Species:</label>
               <select id="speciesDropdown" name="species">
+                <option value="none">Select a Species</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
                 <option value="bird">Bird</option>
@@ -34,32 +35,7 @@
               <select id="breedDropdown" name="breed">
                 <!-- Breed options for each species -->
                 <!-- Dog breeds -->
-                <optgroup label="Dog">
-                  <option value="Shih Tzu">Shih Tzu</option>
-                  <option value="Mini Poodle">Mini Poodle</option>
-                  <option value="Border Collie">Border Collie</option>
-                  <option value="Labrador">Labrador</option>
-                  <option value="Yorkie">Yorkie</option>
-                </optgroup>
-                <!-- Cat breeds -->
-                <optgroup label="Cat">
-                  <option value="Ragdoll">Ragdoll</option>
-                  <option value="Shorthair">Shorthair</option>
-                  <option value="Maine Coon">Maine Coon</option>
-                  <option value="Siamese">Siamese</option>
-                </optgroup>
-                <!-- Bird breeds -->
-                <optgroup label="Bird">
-                  <option value="Parakeet">Parakeet</option>
-                  <option value="Parrot">Parrot</option>
-                  <option value="Cockatoo">Cockatoo</option>
-                </optgroup>
-                <!-- Hamster breeds -->
-                <optgroup label="Hamster">
-                  <option value="Dwarf">Dwarf</option>
-                  <option value="Roborovski">Roborovski</option>
-                  <option value="Syrian">Syrian</option>
-                </optgroup>
+               
               </select>
             </div>
           </div>
@@ -109,6 +85,6 @@
       </div>
     </div>
   </form>
-  <script src="./js/createProfile.js"></script>
+  <script src="./createProfile.js"></script>
 </body>
 </html>

@@ -56,16 +56,17 @@ app.use((req, res, next) => {
 });
 
 // Route to get all pets from the database
-app.get('/get-pets', async (req, res) => {
-  try {
-    // Fetch all pets from the database
-    const pets = await Pet.find();
-    res.json(pets); // Send the fetched pets as JSON response
-  } catch (error) {
-    console.error('Error fetching pets:', error);
-    res.status(500).send('Error fetching pets');
-  }
+app.get('/get-pets', (req, res) => {
+  Pet.find()
+    .then(pets => {
+      res.json(pets);
+    })
+    .catch(error => {
+      console.error('Error fetching pets:', error);
+      res.status(500).send('Error fetching pets');
+    });
 });
+
 
 // API route for serving images
 app.get('/api/images/:imageName', (req, res) => {

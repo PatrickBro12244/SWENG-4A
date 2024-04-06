@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const speciesDropdown = document.getElementById('speciesDropdown');
   const breedDropdown = document.getElementById('breedDropdown');
@@ -32,16 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  updatePetProfiles();
 
-  // Function to update pet profiles based on selected species and breed
+
   async function updatePetProfiles() {
     const petData = await fetchPets();
-    const filteredPets = filterPets(petData, speciesDropdown.value.toLowerCase(), breedDropdown.value.toLowerCase());
+    const filteredPets = filterPets(petData, speciesDropdown.value.toLowerCase(), breedDropdown.value.toLowerCase(), ageDropdown.value.toLowerCase(), sizeDropdown.value.toLowerCase());
     petContainer.innerHTML = filteredPets.map(generatePetProfile).join('');
   }
-  
-
+  updatePetProfiles();
 
   // Event listeners for species dropdown, breed dropdown, and search button
   speciesDropdown.addEventListener('change', () => {
@@ -54,16 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
       hamster: ['Any','Dwarf', 'Roborovski', 'Syrian']
     };
     populateBreeds(speciesBreeds[selectedSpecies] || ['Any']);
-
   });
 
 
   searchButton.addEventListener('click', updatePetProfiles);
 
-  // Populate age dropdown
-  for (let i = 0; i < 15; i++) {
-    ageDropdown.innerHTML += `<option value="${i + 1}-year">${i + 1} year${i === 0 ? '' : 's'} old</option>`;
+   ageDropdown.innerHTML = '<option value="Any">Any</option>'; // Add option for "Any"
+
+  ageDropdown.innerHTML += '<option value="below-1-year">Below 1 year</option>'; // Add option for below 1 year
+
+  for (let i = 1; i <= 15; i++) {
+    ageDropdown.innerHTML += `<option value="${i}-year">${i} year${i === 1 ? '' : 's'} old</option>`;
   }
+
+  ageDropdown.innerHTML += '<option value="above-15-years">Above 15 years</option>'; // Add option for above 15 years
 
   // Populate initial breeds and update pet profiles
   populateBreeds(['Any']);
@@ -71,13 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
   // Function to filter pets based on selected species and breed
-  function filterPets(pets, selectedSpecies, selectedBreed) {
-    return pets.filter(pet => {
-      const speciesMatch = selectedSpecies === "any" || pet.species.toLowerCase() === selectedSpecies;
-      const breedMatch = selectedBreed === "any" || pet.breed.toLowerCase() === selectedBreed;
-      return speciesMatch && breedMatch;
-    });
-  }
+  function filterPets(pets, selectedSpecies, selectedBreed, selectedAge, selectedSize) {
+  return pets.filter(pet => {
+    const speciesMatch = selectedSpecies === "any" || pet.species.toLowerCase() === selectedSpecies;
+    const breedMatch = selectedBreed === "any" || pet.breed.toLowerCase() === selectedBreed;
+    const ageMatch = selectedAge === "any" || pet.age.toLowerCase() === selectedAge;
+    const sizeMatch = selectedSize === "any" || pet.size.toLowerCase() === selectedSize;
+    return speciesMatch && breedMatch && ageMatch && sizeMatch;
+  });
+}
 
   function populateBreeds(breeds) {
     breedDropdown.innerHTML = '';
@@ -86,4 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  
+
   module.exports = { filterPets, populateBreeds };
+
+  

@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const petForm = document.getElementById('petForm');
+  const speciesDropdown = document.getElementById('speciesDropdown');
+  const breedDropdown = document.getElementById('breedDropdown');
+  
+  speciesDropdown.addEventListener('change', () => {
+    const selectedSpecies = speciesDropdown.value.toLowerCase();
+    const speciesBreeds = {
+      dog: ['Shih Tzu', 'Mini Poodle', 'Border Collie', 'Labrador', 'Yorkie'],
+      cat: ['Ragdoll', 'Shorthair', 'Maine Coon', 'Siamese'],
+      bird: ['Parakeet', 'Parrot', 'Cockatoo'],
+      hamster: ['Dwarf', 'Roborovski', 'Syrian']
+    };
+    
+    // Clear previous options
+    breedDropdown.innerHTML = '';
+
+    // Populate breed dropdown based on selected species
+    speciesBreeds[selectedSpecies].forEach(breed => {
+      breedDropdown.innerHTML += `<option value="${breed.toLowerCase()}">${breed}</option>`;
+    });
+  });
+  
+  
+    ageDropdown.innerHTML += '<option value="below-1-year">Below 1 year</option>'; // Add option for below 1 year
+  
+    for (let i = 1; i <= 15; i++) {
+      ageDropdown.innerHTML += `<option value="${i}-year">${i} year${i === 1 ? '' : 's'} old</option>`;
+    }
+  
+    ageDropdown.innerHTML += '<option value="above-15-years">Above 15 years</option>'; // Add option for above 15 years
+
+    
 
   petForm.addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
@@ -42,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+ 
     // Create a FormData object to store form data
     const formData = new FormData();
     formData.append('name', name);

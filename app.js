@@ -4,7 +4,14 @@ const exphbs = require('express-handlebars');
 const multer = require('multer'); // Import multer for handling file uploads
 const path = require('path');
 
+const uri = "mongodb+srv://franciscokyle12345:cyt5m9JvsBDwk0Nystsweng.wjpjqmc.mongodb.net/?retryWrites=true&w=majority&appName=STSWENG";
+
 const app = express();
+
+// Connect to MongoDB using Mongoose
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 // Import the Pet model
 const Pet = require('./database/schemas/Pet');

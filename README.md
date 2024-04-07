@@ -1,11 +1,15 @@
 # STSWENG
 
-This project is a pet catalog website that allows users to view and upload pets and their details.
+Welcome to STSWENG, a pet catalog platform where users can view and upload information about pets.
 
-* * *
+## Features
 
-- Francisco, Kyle Patrick Roland M.
+- View a catalog of pets
+- Upload information about your own pets
+- Discover new pets available for adoption
+- Filter through a variety of pets
 
-* * *
+## Getting Started
 
-npm start
+To get started with STSWENG, simply clone this repository and run `npm start` to launch the application.
+

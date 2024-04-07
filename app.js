@@ -4,17 +4,18 @@ const exphbs = require('express-handlebars');
 const multer = require('multer'); // Import multer for handling file uploads
 const path = require('path');
 
-const uri = "mongodb+srv://franciscokyle12345:cyt5m9JvsBDwk0Nystsweng.wjpjqmc.mongodb.net/?retryWrites=true&w=majority&appName=STSWENG";
+const uri = "mongodb+srv://franciscokyle12345:cyt5m9JvsBDwk0Ny@stsweng.wjpjqmc.mongodb.net/";
 
 const app = express();
 
 // Connect to MongoDB using Mongoose
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+
 // Import the Pet model
-const Pet = require('./database/schemas/Pet');
+const Pet = require('./database/schemas/Pet.js');
 
 // Set up multer for handling file uploads
 const storage = multer.diskStorage({
@@ -44,7 +45,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes - Pages
 
-require('./database'); // mongodb stuff now in database
 
 app.get('/', (req, res) => {
   res.redirect('/registration_route');

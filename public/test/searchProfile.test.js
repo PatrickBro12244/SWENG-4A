@@ -1,4 +1,4 @@
-const { filterPets } = require('../searchProfile'); // Adjust the path if necessary
+const { filterPets } = require('../searchProfile'); 
 
 describe('filterPets function', () => {
   const petData = [

@@ -1,5 +1,5 @@
 # Pet Catalog Web Application
-Kyle Patrick Roland M. Francisco
+
 ## Overview:
 This repository contains the source code for a Pet Catalog web application. The application allows users to browse multiple pets, store pet profiles in a database, view unique profiles of each pet, sort pets by various criteria, and upload their own pet profiles.
 
@@ -19,4 +19,8 @@ This repository contains the source code for a Pet Catalog web application. The 
 
 ## Automated Testing:
 - **Jest:** Used for automated testing, specifically to verify the functionality of the pet sorting feature.
-- **ESLint and Superlint:** Integrated via GitHub Actions to ensure adherence to code 
+- **ESLint and Superlint:** Integrated via GitHub Actions to ensure adherence to code quality standards.
+
+---
+
+*By Kyle Patrick Roland M. Francisco*
